@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Thriveni" >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Payment</title>
+	
+</head>
+<body>
+	<form>
+		<table
+		border="4"
+        width="75%"
+        height="100%"
+        align="center"
+        cellspacing="0"
+        cellpadding="10"
+        >
+        <th style="color: blue; font-size: 30px" colspan="2">Make Payment</th>
+
+		<tr >
+			<td colspan="2">
+				<p id="demo" align="center"></p>
+			</td>
+		</tr>
+
+		<tr >
+			<td >
+				<p style="font-size: 20px; color: green;">Sender Details</p><br>
+		
+				Customer ID
+					<input type="number" name="account"><br><br>
+				Account Holder Name
+					<input type="text" name="account"><br><br>
+				Clear Balance
+					<input type="number" name="account">
+			</td>
+
+			<td>
+				<p style="font-size: 20px; color: green;">Receiver Details</p>
+
+				BIC
+					<input type="number" name="account"><br><br>
+				Institution Name 
+					<input type="text" name="account"><br><br>
+				Account Holder Name
+					<input type="text" name="account"><br><br>
+				Account Holder Number 
+					<input type="number" name="account">
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center">
+				<p style="font-size: 20px; color: green;">Transaction Details</p>
+
+				Transfer Type
+					<select>
+						<option>-Select-</option>
+						<option>Bank Transfer</option>
+						<option>Customer Transfer</option>
+					</select><br><br>
+				Message Code 
+					<select>
+						<option>-Select-</option>
+						<option>CHQB</option>
+						<option>CORT</option>
+						<option>HOLD</option>
+						<option>INTC</option>
+						<option>PHOB</option>
+						<option>PHOI</option>
+						<option>PHON</option>
+						<option>REPA</option>
+						<option>SDVA</option>
+						
+					</select><br><br>
+				Amount
+					<input type="number" name="account" id="mySelect" onchange="myFunction()"><br><br>
+				Add transfer fee 
+					<input type="number" name="account" id="demo1">
+					
+			</td>
+		</tr>
+
+		</table>
+		<br><br>
+		<center>
+			<button type="submit" value="submit" name="submit">Submit</button>
+		</center>
+		
+	</form>
+	
+	<script>
+		
+		function myFunction() {
+  		var x = document.getElementById("mySelect").value;
+
+ 		 document.getElementById("demo1").innerHTML = 0.0025*x;
+		}
+		const d = new Date();
+		document.getElementById("demo").innerHTML = d;
+	</script>
+</body>
+	
+</html>
